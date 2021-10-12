@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(149, 165, 166, 1);
+      }
+      h3 {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+      }
+      div.container__div {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+      }
+      div.wave__div {
+        width: 20px;
+        height: 20px;
+        transform: scale(1);
+        border-radius: 50%;
+        animation: pulse 2s cubic-bezier(0.58, 0.12, 0.51, 0.85) infinite;
+      }
+      .wave__div:first-child {
+        background-color: #2980b9;
+      }
+      .wave__div:nth-child(2) {
+        background-color: rgba(52, 73, 94, 1);
+      }
+      .wave__div:last-child {
+        background-color: rgba(142, 68, 173, 1);
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.9);
+          box-shadow: 0 0 0 0px rgba(26, 188, 156, 1);
+        }
+        70% {
+          transform: scale(1.6);
+          box-shadow: 0 0 0 6px rgba(26, 188, 156, 0.4);
+        }
+        100% {
+          transform: scale(0.9);
+          box-shadow: 0 0 0 0px rgba(26, 188, 156, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>wave</h3>
+    <div class="container__div">
+      <div class="wave__div"></div>
+      <div class="wave__div"></div>
+      <div class="wave__div"></div>
+    </div>
+  </body>
+  <script>
+    console.log("sdfd");
+  </script>
+</html>
